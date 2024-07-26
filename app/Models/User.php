@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function chaptions()
+    {
+        return $this->hasMany(Chaption::class, 'owner_id');
+    }
 }
